@@ -17,6 +17,8 @@ body {
     font-size: 45px;
 }
 
+
+
 .button-div {
     background-color: rgba(164, 198, 221, 0.432);
     width: 600px;
@@ -48,10 +50,16 @@ button {
     margin-bottom: 60px;
 }
 
+h2 {
+    font-size: 45px;
+    margin: 10px;
+}
+
 .score {
     font-size: 40px;
     margin: 0;
     padding: 5px;
+    display:inline-block;
 }
 
 
