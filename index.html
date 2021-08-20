@@ -9,34 +9,29 @@
     <!--Favicon created in Canva-->
     <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon.png"/>
 
-    <title>High - Low Game</title>
+    <title>High / Low Game</title>
 </head>
 <body>
     
-    <!-- Add a logo here-->
     
-    <h1>High - Low: How Far Can You Go?</h1>
+    <img src="assets/images/high-low-logo .png" alt="high low game logo" id="logo-image">
+    <h1 class="title"> High / Low... How Far Can You Go?</h1>
+
+        <p>The aim of the game is to guess if the number will be higher or lower than the previous number. Simply click on your chosen high/low button and hope for the best!</p>
+        <p>Are you feeling lucky?...</p>
     
-    <!--Game Description, how to play-->
-    <p>The aim of the game is to guess if the number will be higher or lower than the previous.</p>
-    <p>Are you feeling lucky?...</p>
+    <div class="button-div">
+        <button alt="higher" id="higher-button" ><img src="assets/images/resized-higher-button.png" alt="higher button image" class="button-image"></button>
 
-    <div>
-        <!--Higher Button-->
-        <button alt="higher"></button>
+        <h2>Random number goes here</h2>
 
-        <!--Random Number-->
-        <h2></h2>
-
-        <!--Lower Button-->
-        <button alt="lower"></button>
+        <button alt="lower" id="lower-button" ><img src="assets/images/resized-lower-icon.png" alt="lower button image" class="button-image"></button>
     </div>
 
-    <!--Score Heading-->
-    <h2>Score</h2>
-
-    <!--Score Tally-->
-    <p></p>
+    <div class="score">
+        <p class="score">Score:</p>
+        <p class="score">0</p>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>
