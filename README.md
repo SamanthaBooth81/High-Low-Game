@@ -11,7 +11,6 @@ High / Low is a game of chance involving, as the title suggests, picking between
 
 The use of JavaScript enables the difficulty of the game to increase with each level and the range of numbers grows, starting from 0 - 25 up to 0 - 500.
 
-
 ## Table of Contents
 
 [Features](#features)
