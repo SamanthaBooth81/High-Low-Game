@@ -1,4 +1,4 @@
-# High / Low - How far can you go?
+<h1 align="center">High / Low - How far can you go?</h1>
 
 ADD RESPONSIVE IMAGE HERE!!!!!!
 
@@ -12,6 +12,8 @@ High / Low is a game of chance involving, as the title suggests, picking between
 The use of JavaScript enables the difficulty of the game to increase with each level and the range of numbers grows, starting from 0 - 25 up to 0 - 500.
 
 ## Table of Contents
+
+[User Experience](#user-experience)
 
 [Features](#features)
 
@@ -30,6 +32,37 @@ The use of JavaScript enables the difficulty of the game to increase with each l
 [Credit](#credit)
 
 [Acknowledgments](#Acknowledgments)
+
+## User Experience
+### User Stories
+
+### Design
+
+#### Colour Scheme
+<img src="assets/images/adobe-color-wheel.png"> 
+
+#### Typography
+
+The main font used was 'Acme', Sans-serif. I chose this font as I thought it's playfulness suited the game I was creating but was still easily readable. 
+
+<img src="assets/images/acme-google-fonts-min.png" height="40px">
+
+I also used the fallback fonts of:
+- 'Oswald' sans-serif, 
+
+ <img src="assets/images/oswald-google-fonts-min.png" height="40px">
+ 
+ - 'Urbanist' sans-serif
+
+ <img src="assets/images/urbanist-google-fonts-min.png" height="30px">
+
+#### Wireframes
+
+- The following wireframes were created in Balsamiq, the were followed closely to acheieve the final outcome. 
+
+<img src="assets/images/load-page-wireframe-min.png" height="300px"> 
+
+<img src="assets/images/incorrect-answer-wireframe-min.png" height="300px"> 
 
 
 ## Features
