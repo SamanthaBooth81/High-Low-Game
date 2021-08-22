@@ -104,6 +104,8 @@ The user clicks the buttons to make their choice, if they are correct an alert w
 # Deployment 
 # Credit
 ## Content 
+
+The images were designed and downloaded using [Canva Pro](https://www.canva.com/). 
 ## Media 
 # Acknowledgments
 
