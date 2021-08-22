@@ -20,10 +20,11 @@ body {
 
 
 .button-div {
-    background-color: rgba(164, 198, 221, 0.432);
+    background-color: rgba(164, 203, 221, 0.432);
     width: 600px;
     height: 400px;
     margin: auto;
+    border-radius: 10px;
 }
 
 .button-image {
