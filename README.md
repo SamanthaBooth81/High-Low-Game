@@ -69,10 +69,33 @@ I also used the fallback fonts of:
 
 <img src="assets/images/incorrect-answer-wireframe-min.png" height="300px"> 
 
+### Other Details
+- I intentionally designed the button images to flow like an arrow head, up for higher and down for lower. I also, added some pink contrast to the text to tie in with the colour scheme. 
+
+<img src="assets/images/high-button.png" height="100px">
+<img src="assets/images/low-button.png" height="100px">
+
+- The same theme was applied to the design of the logo, with the shape pointing in both up and down directions. 
+
+<img src="assets/images/high-low-logo .png" height="100px">
+
 
 # Features
 
+- Game Heading & Logo 
+
+- Game Aim 
+
+- Game Area 
+The user clicks the buttons to make their choice, if they are correct an alert will appear to confirm this and the score will increment by 1 point. If they are incorrect, an alert will apear to tell them this and they game will start from the beginning. 
+
+- Score 
+
 ## Features to be Implemented
+
+- Additional games could be added such as rock, paper, scissors or a matching game using colours or numbers (similar to the card game pairs). 
+
+- Scoreboard containing the top 10 highest scores with the date acheived 
 
 # Technologies Used
 # Testing
