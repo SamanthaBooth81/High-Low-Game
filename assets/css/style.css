@@ -44,10 +44,19 @@ button {
     border-radius: 30px;
     width: 300px;
     height: 100px;
+    cursor: pointer;
 }
 
 #higher-button{
-    margin-top: 80px;
+    margin-top: 45px;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color:#38b6ffab;
+    border: 3px solid #FC52FF;
+    border-radius: 30px;
+    width: 300px;
+    height: 100px;
+    cursor: pointer;
 }
 
 #higher-button:hover {
@@ -55,7 +64,15 @@ button {
 }
 
 #lower-button{
-    margin-bottom: 80px;
+    margin-bottom: 45px;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color:#38b6ffab;
+    border: 3px solid #FC52FF;
+    border-radius: 30px;
+    width: 300px;
+    height: 100px;
+    cursor: pointer;
 }
 
 #lower-button:hover {
@@ -77,3 +94,41 @@ h2 {
 #score-total {
     color: #7BFF2B;
 }
+#play img{
+    height: 140px;
+    margin: auto;
+    cursor: pointer;
+}
+
+#box {
+    background-color: rgb(209, 135, 238);
+    width: 450px;
+    height: 180px;
+    border-radius: 10px;
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    display: block;
+    display: none;
+}
+
+#box h1 {
+    margin: 5px;
+    padding: 10px;
+
+}
+#box p {
+    margin: 5px;
+    padding: 10px;
+    display: block;
+}
+
+.play-game {
+    margin: 5px;
+    background-color: #38B6FF;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 100px;
+}
+
+
