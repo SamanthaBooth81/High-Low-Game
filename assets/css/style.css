@@ -3,7 +3,7 @@
 body {
     text-align: center;
     font-family: 'Acme', sans-serif, 'Oswald', sans-serif, 'Urbanist', sans-serif;
-    background-color: rgba(0, 0, 0, 0.911);
+    background-color: rgb(0, 0, 0);
     color: white;
  }
 
@@ -63,6 +63,17 @@ body {
     background-color: #7BFF2B;
 }
 
+#play-button {
+    background-color: black;
+    border: black;
+    border-style: none;
+}
+#play-button img{
+    height: 140px;
+    margin: auto;
+    cursor: pointer;
+}
+
 #lower-button{
     margin-bottom: 45px;
     margin-left: 30%;
@@ -93,11 +104,6 @@ h2 {
 
 #score-total {
     color: #7BFF2B;
-}
-#play img{
-    height: 140px;
-    margin: auto;
-    cursor: pointer;
 }
 
 #box {
