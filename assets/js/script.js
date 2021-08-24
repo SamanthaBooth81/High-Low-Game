@@ -11,21 +11,23 @@
 //         }
 // }
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
+
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function(){
-            if(this.getAttribute("data-type") === "play") {
+            if(this.getAttribute("data-type")=== "play") {
                 alert("You clicked play");
             } else if (this.getAttribute("data-type") === "higher") {
-                alert(`You clicked ${higher}`);
+                alert("You clicked higher");
             } else {
                 let lower = this.getAttribute("data-type") === "lower";
                 alert(`You clicked ${lower}`);
             }
-        }
+        })
     }
 })
+
 
 function runGame() {
 }
@@ -37,10 +39,14 @@ function displayRandomNumber(){
 
 }
 
-function checkAnswer()
+function checkAnswer(){
 
-function calculateCorrectAnswer()
+}
 
-function incrementScore()
+function calculateCorrectAnswer(){
 
+}
 
+function incrementScore(){
+
+}
