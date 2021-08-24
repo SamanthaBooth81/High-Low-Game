@@ -21,9 +21,8 @@ body {
 }
 
 .button-div {
-    /* background-color: rgba(164, 203, 221, 0.432); */
     width: 700px;
-    height: 450px;
+    height: 500px;
     margin: auto;
     border-radius: 10px;
     border-style: dotted;
@@ -37,15 +36,6 @@ body {
     height: 100px;
     align-items: center;
 }
-
-/* button {
-    background-color:#38b6ffab;
-    border: 3px solid #FC52FF;
-    border-radius: 30px;
-    width: 300px;
-    height: 100px;
-    cursor: pointer;
-} */
 
 #higher-button{
     margin-top: 45px;
@@ -69,9 +59,13 @@ body {
     border-style: none;
 }
 #play-button img{
-    height: 140px;
-    margin: auto;
+    height: 120px;
     cursor: pointer;
+}
+
+#random-number {
+    font-size: 60px;
+    display: inline-block;
 }
 
 #lower-button{
