@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function(){
             if(this.getAttribute("data-type") === "play") {
-                onclick = document.getElementById("random-number").innerHTML = generateNumber;
+                // onclick = document.getElementById("random-number").innerHTML = generateNumber;
+                document.getElementById('play-button').onclick = function () {
+                    document.getElementById("random-number").innerHTML = random_number();
+                };
             } else if (this.getAttribute("data-type") === "higher") {
                 alert("You clicked higher");
             } else {
@@ -15,13 +18,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
+let random_number = function(){
+    return Math.floor(Math.random() * 100) + 1;
+};
 
-function generateNumber() {
+// function generateNumber() {
 
-    // Generates the random number the user will make their guesses from
-    let randomNumber = Math.floor((Math.random) * 100) +1;  
+//     // Generates the random number the user will make their guesses from
+//     let randomNumber = Math.floor((Math.random) * 100) +1;  
     
-}
+// }
 
 function displayRandomNumber(){
 
