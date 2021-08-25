@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 })
+/**
+ * Used to help generate random button functionality 
+ * https://wordpress.stackexchange.com/questions/354184/insert-a-button-on-a-page-with-random-number-generation 
+ */ 
 
 let random_number = function(){
     return Math.floor(Math.random() * 100) + 1;
