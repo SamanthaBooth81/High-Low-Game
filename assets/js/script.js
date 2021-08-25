@@ -1,55 +1,40 @@
+let randomNumber1 = Math.floor(Math.random() * 100) + 1;
+let randomNumber2 = Math.floor(Math.random() * 100) + 1; 
+
+function generateNumber() {
+
+// Generates the random number the user will make their guesses from
+randomNumber1 = Math.floor(Math.random() * 100) + 1; 
+randomNumber2 = Math.floor(Math.random() * 100) + 1; 
+    
+}
+
 document.addEventListener("DOMContentLoaded", function() {
 
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
-        button.addEventListener("click", function(){
+        button.addEventListener("click", function() {
             if(this.getAttribute("data-type") === "play") {
-                // onclick = document.getElementById("random-number").innerHTML = generateNumber();
-                document.getElementById('play-button').onclick = function () {
-                    document.getElementById("random-number").innerHTML = randomNumber();
-                };
+            document.getElementById("random-number").innerHTML = randomNumber1;
             } else if (this.getAttribute("data-type") === "higher") {
                 checkAnswer();
-                /* alert("You clicked higher"); */
             } else {
                 let lower = this.getAttribute("data-type") === "lower";
                 checkAnswer();
-                /* alert("You clicked lower"); */
             }
         })
     }
 })
-
-/**
- * Used to help generate random button functionality 
- * https://wordpress.stackexchange.com/questions/354184/insert-a-button-on-a-page-with-random-number-generation 
- */ 
-
-let randomNumber = function(){
-    return Math.floor(Math.random() * 100) + 1;
-};
-
-function generateNumber() {
-
-//     // Generates the random number the user will make their guesses from
-//     let randomNumber1 = Math.floor((Math.random) * 100) +1;  
-return Math.floor(Math.random() * 100) + 1;
-    
-}
-const randomNum1 = generateNumber();
-const randomNum2 = generateNumber();
-console.log(randomNum1, randomNum2);
+console.log(randomNumber1, randomNumber2);
 
 function calculateCorrectAnswer(){
 
-    let randomNumber2 = Math.floor(Math.random() * 100) + 1;
-
-    randomNumber = parseInt(document.getElementById("random-number").innerText);
+    randomNumber1 = parseInt(document.getElementById("random-number").innerText); 
     
-    if (randomNumber >= randomNumber2) {
-    calculateCorrectAnswer === "higher";
+    if (randomNumber1 => randomNumber2) {
+    calculateCorrectAnswer === document.getElementById("higher-button");
     } else {
-    calculateCorrectAnswer === "lower";
+    calculateCorrectAnswer === document.getElementById("lower-button");
     }
 }
 
@@ -59,15 +44,15 @@ function checkAnswer(){
     
     let calculatedAnswer = calculateCorrectAnswer();
     
-    let isCorrect = userAnswer === calculatedAnswer[0];
+    let isCorrect = userAnswer === calculatedAnswer;
     
     if (isCorrect) {
     alert("Correct Answer!")
     } else {
-    alert ("Opps! Incorrect Answer :( Game Over!");
+    alert ("Opps! Incorrect Answer :(");
     }
-
 }
+
 
 function incrementScore(){
 
