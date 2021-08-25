@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function(){
             if(this.getAttribute("data-type") === "play") {
-                // onclick = document.getElementById("random-number").innerHTML = generateNumber;
+                // onclick = document.getElementById("random-number").innerHTML = generateNumber();
                 document.getElementById('play-button').onclick = function () {
                     document.getElementById("random-number").innerHTML = randomNumber();
                 };
@@ -29,18 +29,22 @@ let randomNumber = function(){
     return Math.floor(Math.random() * 100) + 1;
 };
 
-// function generateNumber() {
+function generateNumber() {
 
 //     // Generates the random number the user will make their guesses from
-//     let randomNumber = Math.floor((Math.random) * 100) +1;  
+//     let randomNumber1 = Math.floor((Math.random) * 100) +1;  
+return Math.floor(Math.random() * 100) + 1;
     
-// }
+}
+const randomNum1 = generateNumber();
+const randomNum2 = generateNumber();
+console.log(randomNum1, randomNum2);
 
 function calculateCorrectAnswer(){
 
     let randomNumber2 = Math.floor(Math.random() * 100) + 1;
 
-    randomNumber = parseInt(documet.getElementById("random-number").innerText);
+    randomNumber = parseInt(document.getElementById("random-number").innerText);
     
     if (randomNumber >= randomNumber2) {
     calculateCorrectAnswer === "higher";
