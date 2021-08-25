@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if(this.getAttribute("data-type") === "play") {
                 // onclick = document.getElementById("random-number").innerHTML = generateNumber;
                 document.getElementById('play-button').onclick = function () {
-                    document.getElementById("random-number").innerHTML = random_number();
+                    document.getElementById("random-number").innerHTML = randomNumber();
                 };
             } else if (this.getAttribute("data-type") === "higher") {
                 alert("You clicked higher");
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * https://wordpress.stackexchange.com/questions/354184/insert-a-button-on-a-page-with-random-number-generation 
  */ 
 
-let random_number = function(){
+let randomNumber = function(){
     return Math.floor(Math.random() * 100) + 1;
 };
 
