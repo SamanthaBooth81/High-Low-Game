@@ -98,6 +98,9 @@ The user clicks the buttons to make their choice, if they are correct an alert w
 - Scoreboard containing the top 10 highest scores with the date acheived 
 
 # Technologies Used
+
+- [JSFiddle](https://jsfiddle.net/) to double check code and functionality before added to Gitpod. 
+
 # Testing
 # Validator Testing
 # Bugs Found 
@@ -105,7 +108,9 @@ The user clicks the buttons to make their choice, if they are correct an alert w
 # Credit
 ## Content 
 
-The images were designed and downloaded using [Canva Pro](https://www.canva.com/). 
+- The images were designed and downloaded using [Canva Pro](https://www.canva.com/). 
+- Code for generating the Random Number was sources from [WordPress Development](https://wordpress.stackexchange.com/questions/354184/insert-a-button-on-a-page-with-random-number-generation).
+
 ## Media 
 # Acknowledgments
 
