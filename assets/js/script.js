@@ -1,59 +1,73 @@
-let randomNumber1 = Math.floor(Math.random() * 100) + 1;
-let randomNumber2 = Math.floor(Math.random() * 100) + 1; 
+document.addEventListener("DOMContentLoaded", function() {  
+  
+}) 
 
-function generateNumber() {
+/** 
+*Variables called below aim to set the new number with the second random number generated. 
+**/
+let randomNum = document.getElementById("random-number");
+randomNum = 0;
+let lastNum = 0;
+let currentNum = generateRandomNumber(); 
+randomNum.innerText = generateRandomNumber();  
 
-// Generates the random number the user will make their guesses from
-randomNumber1 = Math.floor(Math.random() * 100) + 1; 
-randomNumber2 = Math.floor(Math.random() * 100) + 1; 
-    
+/** 
+*Sets the score to 0 
+**/
+let score = document.getElementById("score-total");  
+score = 0; 
+
+/** 
+*calls the class name linked to the 2 possible answers the user can provide
+**/
+ let userChoice = document.getElementsByClassName("answer"); 
+
+/* Generate 2 random numbers for comparison, randomNumber1 is displayed when play button is clicked */ 
+function generateRandomNumber(){
+randomNumber1 = Math.floor(Math.random() * 25);
+randomNumber2 = Math.floor(Math.random() * 25);
 }
+console.log(randomNumber1, randomNumber2); // to display in the console whilst checking functionality
 
-document.addEventListener("DOMContentLoaded", function() {
-
-    let buttons = document.getElementsByTagName("button");
+// Add event listeners to each button 
+let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function() {
+        
             if(this.getAttribute("data-type") === "play") {
             document.getElementById("random-number").innerHTML = randomNumber1;
+            
             } else if (this.getAttribute("data-type") === "higher") {
-                checkAnswer();
+                runGame(userChoice); 
+                
             } else {
                 let lower = this.getAttribute("data-type") === "lower";
-                checkAnswer();
+                runGame(userChoice); 
             }
         })
     }
-})
-console.log(randomNumber1, randomNumber2);
-
-function calculateCorrectAnswer(){
-
-    randomNumber1 = parseInt(document.getElementById("random-number").innerText); 
+  
+// this function calculates the correct answer and check against the user input. Dependant of answer score is either incremented or set back to 0
+function runGame(userChoice){
+    lastNum = currentNum; 
+    currentNum = generateRandomNumber();
+    randomNum.innerText = currentNum;
     
-    if (randomNumber1 => randomNumber2) {
-    calculateCorrectAnswer === document.getElementById("higher-button");
-    } else {
-    calculateCorrectAnswer === document.getElementById("lower-button");
-    }
-}
-
-function checkAnswer(){
-
-    let userAnswer = parseInt(document.getElementById("higher-button", "lower-button")); 
+    let correctAnswer;
+        if (randomNumber1 <= randomNumber2){
+        correctAnswer = document.getElementsByClassName("answer");
+        } else {
+        correctAnswer = document.getElementsByClassName("answer");
+        }
+       
     
-    let calculatedAnswer = calculateCorrectAnswer();
-    
-    let isCorrect = userAnswer === calculatedAnswer;
-    
-    if (isCorrect) {
-    alert("Correct Answer!")
-    } else {
-    alert ("Opps! Incorrect Answer :(");
-    }
-}
-
-
-function incrementScore(){
-
+      if (userChoice == correctAnswer) {
+          score++;
+          score.innerText = score; 
+          alert("Correct Answer!");
+      } else {
+          score = 0; 
+          score.innerText = score; 
+          alert ("Incorrect Answer! GAME OVER!")
+      }
 }
