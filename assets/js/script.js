@@ -11,6 +11,9 @@ let lastNum = 0;
 let currentNum = generateRandomNumber(); 
 randomNum.innerText = generateRandomNumber();  
 
+let isHigher = false;
+let isLower = false;
+
 /** 
 *Sets the score to 0 
 **/
@@ -24,10 +27,12 @@ score = 0;
 
 /* Generate 2 random numbers for comparison, randomNumber1 is displayed when play button is clicked */ 
 function generateRandomNumber(){
-randomNumber1 = Math.floor(Math.random() * 25);
-randomNumber2 = Math.floor(Math.random() * 25);
+randomNumber1 = Math.floor(Math.random() * 25) +1;
+randomNumber2 = Math.floor(Math.random() * 25) +1;
+
+console.log(randomNumber1, randomNumber2);
 }
-console.log(randomNumber1, randomNumber2); // to display in the console whilst checking functionality
+
 
 // Add event listeners to each button 
 let buttons = document.getElementsByTagName("button");
@@ -38,11 +43,11 @@ let buttons = document.getElementsByTagName("button");
             document.getElementById("random-number").innerHTML = randomNumber1;
             
             } else if (this.getAttribute("data-type") === "higher") {
-                runGame(userChoice); 
+                runGame();
                 
             } else {
                 let lower = this.getAttribute("data-type") === "lower";
-                runGame(userChoice); 
+                runGame();
             }
         })
     }
@@ -55,19 +60,25 @@ function runGame(userChoice){
     
     let correctAnswer;
         if (randomNumber1 <= randomNumber2){
-        correctAnswer = document.getElementsByClassName("answer");
+        correctAnswer = document.getElementById("higher");
         } else {
-        correctAnswer = document.getElementsByClassName("answer");
+        correctAnswer = document.getElementById("lower");
         }
        
     
       if (userChoice == correctAnswer) {
-          score++;
-          score.innerText = score; 
+          incrementScore();
           alert("Correct Answer!");
       } else {
           score = 0; 
           score.innerText = score; 
           alert ("Incorrect Answer! GAME OVER!")
       }
+
 }
+
+function incrementScore() {
+    score = score + 1 //score to equal itself plus one
+    document.getElementById("score-total").innerHTML = score; //update the score on innerHTML
+
+};
