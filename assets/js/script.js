@@ -1,10 +1,12 @@
 /** 
  *Variables called below aim to set the new number with the second random number generated. 
  **/
+let currentNum = 0;
 let randomNumber = generateRandomNumber(); 
+let randomNumberElem = document.getElementById("random-number");
 // let randomNum = document.getElementById("random-number");
 // let randomNum = null;
-let currentNum = 0;
+
 
 // randomNum.innerText = nextNum;
 
@@ -66,20 +68,23 @@ function runGame(userChoice) {
     } 
 
     if (isAnswerCorrect){
-        randomNumber = currentNum;
-        nextNum = generateRandomNumber();
-        alert("Correct Answer")
+        currentNum = randomNumber;
+        randomNumber = generateRandomNumber();
+        randomNumberElem.innerText = randomNumber;
+        alert("Correct Answer!");
+        
+        console.log(randomNumber);
     }
     else {
         score = 0;
         score.innerText = score;
         alert("Incorrect Answer! GAME OVER!");
+        document.location.reload();
+        clearInterval(interval);
     } 
-
 }
 
 function incrementScore() {
     score = score + 1 //score to equal itself plus one
     scoreElm.innerHTML = score; //update the score on innerHTML
-
 };
