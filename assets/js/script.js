@@ -25,7 +25,7 @@ function generateRandomNumber() {
  * Generates a new number for the computer to use as comparison against the previous random number generated
 */
 let nextNum = generateRandomNumber();
-console.log(nextNum, "nextNum");
+console.log(nextNum);
 
 /**
  * Added event listeners to each button, play to start the game 

@@ -104,6 +104,12 @@ The user clicks the buttons to make their choice, if they are correct an alert w
 # Testing
 # Validator Testing
 # Bugs Found 
+No bugs found. 
+During development the following issues occured but were fixed prior to deployment:
+- A new random number wasn't automatically replacing on the screen the previous number
+- The correct answer wasn't being calculated and then compared with the users answer
+- A new random number wasn't being generated after each user guess
+- The play button generated a new number every time it was pressed but didn't start the game over as it should so the user could skip a number if they felt it would be difficult to guess correctly
 # Deployment 
 # Credit
 ## Content 
