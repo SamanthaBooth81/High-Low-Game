@@ -1,7 +1,7 @@
 /** 
  *Variables called below aim to set the new number with the second random number generated. 
  **/
-let randomNumber1 = generateRandomNumber(); 
+let randomNumber = generateRandomNumber(); 
 // let randomNum = document.getElementById("random-number");
 // let randomNum = null;
 let currentNum = 0;
@@ -53,20 +53,20 @@ function runGame(userChoice) {
     // randomNum.innerText = nextNum;
 
     let isAnswerCorrect = false;
-    if (randomNumber1 < currentNum && userChoice === "higher"){
+    if (randomNumber < currentNum && userChoice === "higher"){
         //  correctAnswer == document.getElementById("higher");
          isAnswerCorrect = true; 
          incrementScore();
          
 
-    } else if (randomNumber1 > currentNum && userChoice === "lower"){
+    } else if (randomNumber > currentNum && userChoice === "lower"){
         // correctAnswer == document.getElementById("lower");
         isAnswerCorrect = true; 
         incrementScore();
     } 
 
     if (isAnswerCorrect){
-        randomNumber1 = currentNum;
+        randomNumber = currentNum;
         nextNum = generateRandomNumber();
         alert("Correct Answer")
     }
