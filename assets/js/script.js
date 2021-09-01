@@ -1,54 +1,57 @@
 /** 
- *Variables called below aim to set the new number with the second random number generated. 
- **/
+*Variables called below set the replace the current number with a new random number 
+**/
 let currentNum = 0;
 let randomNumber = generateRandomNumber(); 
 let randomNumberElem = document.getElementById("random-number");
-// let randomNum = document.getElementById("random-number");
-// let randomNum = null;
-
-
-// randomNum.innerText = nextNum;
 
 /** 
- *Sets the score to 0 
- **/
+*Sets the score to 0 
+**/
 const scoreElm = document.getElementById("score-total");
 let score = 0;
 
-/* Generate 2 random numbers for comparison, randomNumber1 is displayed when play button is clicked */
+/** 
+ * Generates a number at random, randomNumber function is used when play button 
+ * is clicked and when the users choice is correct
+*/
 function generateRandomNumber() {
     return Math.floor(Math.random() * 99) + 1;
 
     console.log(randomNumber1);
 }
+
+/** 
+ * Generates a new number for the computer to use as comparison against the previous random number generated
+*/
 let nextNum = generateRandomNumber();
 console.log(nextNum, "nextNum");
 
-// Added event listeners to each button 
+/**
+ * Added event listeners to each button, play to start the game 
+ * and higher and lower to register the users choice
+ */
 let buttons = document.getElementsByTagName("button");
 for (let button of buttons) {
     button.addEventListener("click", function () {
         
         if (this.getAttribute("data-type") === "play") {
-            // generateRandomNumber();
             document.getElementById("random-number").innerHTML = generateRandomNumber();
 
         } else if (this.getAttribute("data-type") === "higher") {
-            // if (randomNum = 0)
-            //     alert("Press Play");
             runGame("higher");
 
         } else {
             this.getAttribute("data-type") === "lower";
-            // if (randomNum = 0)
-            //     alert("Press Play");
             runGame("lower");
         }
     })
 }
 
-// this function calculates the correct answer and check against the user input. Dependant of answer score is either incremented or set back to 0
+/**
+ * This function calculates the correct answer and checks against the user input. 
+ * Dependant of answer score is either incremented or the game is restarted
+ */
 function runGame(userChoice) {
 
     currentNum = nextNum;
@@ -72,18 +75,19 @@ function runGame(userChoice) {
         randomNumber = generateRandomNumber();
         randomNumberElem.innerText = randomNumber;
         alert("Correct Answer!");
-        
-        console.log(randomNumber);
     }
     else {
         score = 0;
         score.innerText = score;
-        alert("Incorrect Answer! GAME OVER!");
+        alert("Incorrect Answer! GAME OVER");
         document.location.reload();
         clearInterval(interval);
     } 
 }
 
+/**
+ * function increments the score if the answer is correct
+ */
 function incrementScore() {
     score = score + 1 //score to equal itself plus one
     scoreElm.innerHTML = score; //update the score on innerHTML
