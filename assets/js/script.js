@@ -55,7 +55,9 @@ for (let button of buttons) {
 function runGame(userChoice) {
 
     currentNum = nextNum;
-    // randomNum.innerText = nextNum;
+    nextNum = generateRandomNumber();
+    randomNumber.innerText = nextNum;
+    console.log(nextNum);
 
     let isAnswerCorrect = false;
     if (randomNumber < currentNum && userChoice === "higher"){
