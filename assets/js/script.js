@@ -37,7 +37,6 @@ function togglePopup(){
     document.getElementById("popup-1").classList.toggle("active");
 }
 
-
 /**
  * Added event listeners to each button, play to start the game 
  * and higher and lower to register the users choice

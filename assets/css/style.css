@@ -32,10 +32,6 @@ body {
     cursor: pointer;
   } 
 
-  .popup {
-      display: none;
-  }
-
  .popup .content {
     position:absolute;
     top:50%;
@@ -72,6 +68,10 @@ body {
     text-align:center;
   
   }
+
+  .popup {
+    display: none;
+}
    
   .popup.active {
     display:block;
@@ -92,8 +92,7 @@ body {
 
 .title {
     font-size: 40px;
-    /* margin: 10px;
-    margin-right: 100px; */
+    margin-left: 20px;
 }
 
 .button-div {
