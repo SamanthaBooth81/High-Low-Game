@@ -28,10 +28,23 @@ let nextNum = generateRandomNumber();
 console.log(nextNum);
 
 /**
+ * Add event listener for the 'How to Play' button. On click displays game description. 
+ */
+
+document.getElementById("game-rules").addEventListener("click", togglePopup());
+
+function togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
+}
+
+
+/**
  * Added event listeners to each button, play to start the game 
  * and higher and lower to register the users choice
  */
-let buttons = document.getElementsByTagName("button");
+
+
+let buttons = document.getElementsByClassName("game-btn");
 for (let button of buttons) {
     button.addEventListener("click", function () {
         
@@ -46,7 +59,7 @@ for (let button of buttons) {
             runGame("lower");
         }
     })
-}
+ }
 
 /**
  * This function calculates the correct answer and checks against the user input. 

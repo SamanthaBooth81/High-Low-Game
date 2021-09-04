@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,40 +8,46 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Favicon created in Canva-->
-    <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon.png" />
 
     <title>High / Low Game</title>
 </head>
-<body> 
 
-    <img src="assets/images/high-low-logo .png" alt="high low game logo" id="logo-image"> 
-    <h1 class="title">High / Low... How Far Can You Go?</h1>
+<body>
+    <header>
+        <img src="assets/images/high-low-logo .png" alt="high low game logo" id="logo-image">
+        <h1 class="title">High / Low... How Far Can You Go?</h1>
 
-    <!--&nbsp was added before the word 'Simply' as the space between scentences was not showing on the webpage-->
-        <p class="game-description">The aim of the game is to guess if the number will be higher or lower than the previous number. &nbspSimply click on your chosen high/low button and hope for the best!</p>
-        <p>Are you feeling lucky?...</p>
+        <div class="popup" id="popup-1">
+            <div class="content">
+                <!--&nbsp was added before the word 'Simply' as the space between scentences was not showing on the webpage-->
+                <p class="game-description"> The aim of the game is to guess if the hidden number will be higher or
+                    lower than the number displayed.
+                    &nbspSimply choose between ther higher or lower buttons and hope for the best! &nbspAre you feeling
+                    lucky?</p>
+                <p>Press play to start!</p>
+                <div class="close-btn" onclick="togglePopup()">×</div>
+            </div>
+        </div>
+        <button onclick="togglePopup()" id="game-rules">How to Play</button>
+    </header>
+
+    <div class="button-div">
+        <button alt="play" data-type="play" id="play-button" class="game-btn"><img
+                src="assets/images/play-button.png"></button>
+        <button data-type="higher" alt="higher" id="higher-button" class="game-btn"><img
+                src="assets/images/resized-higher-button.png" alt="higher button image" class="button-image"></button>
+        <span id="random-number">0</span>
+        <button data-type="lower" alt="lower" id="lower-button" class="game-btn"><img
+                src="assets/images/resized-lower-icon.png" alt="lower button image" class="button-image"></button>
+    </div>
 
     <div class="score">
         <p class="score">Score:</p>
         <p id="score-total" class="score">0</p>
     </div>
-    
-    <div class="button-div">
-        <button alt="play" data-type="play" id="play-button"><img src="assets/images/play-button.png"></button>
-
-        <button data-type="higher" alt="higher" id="higher-button" ><img src="assets/images/resized-higher-button.png" alt="higher button image" class="button-image"></button>
-
-        <span id="random-number">0</span>
-       
-        <button data-type="lower" alt="lower" id="lower-button" ><img src="assets/images/resized-lower-icon.png" alt="lower button image" class="button-image"></button>
-        
-    </div>
-
-    <!-- <div class="score">
-        <p class="score">Score:</p>
-        <p id="score-total" class="score">0</p>
-    </div> -->
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
