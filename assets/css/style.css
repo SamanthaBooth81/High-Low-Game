@@ -9,7 +9,7 @@ body {
  }
 
  header{
-     margin-bottom: 50px;
+     margin-bottom: 20px;
  }
 
  #logo-image, .title, #game-rules {
@@ -19,8 +19,6 @@ body {
 
  #game-rules {
     float: right;
-    /* margin-top: 20px; */
-    /* transform:translate(-50%,-50%); */
     padding:15px;
     background:#FC52FF;
     border:2px solid;
@@ -43,7 +41,6 @@ body {
     width:95%;
     max-width:500px;
     height:250px;
-    z-index:2;
     text-align:center;
     padding:28px;
     box-sizing:border-box;
@@ -51,7 +48,7 @@ body {
   }
 
   .popup .content .game-description {
-      margin-top: 40px;
+    margin-top: 40px;
   }
    
   .popup .close-btn {
@@ -66,7 +63,6 @@ body {
     font-weight:600;
     line-height:30px;
     text-align:center;
-  
   }
 
   .popup {

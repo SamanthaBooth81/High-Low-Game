@@ -34,7 +34,7 @@ console.log(nextNum);
 document.getElementById("game-rules").addEventListener("click", togglePopup());
 
 function togglePopup(){
-    document.getElementById("popup-1").classList.toggle("active");
+   document.getElementById("popup-1").classList.toggle("active");
 }
 
 /**
