@@ -9,7 +9,7 @@ body {
  }
 
  header{
-     margin-bottom: 20px;
+     margin-bottom: 50px;
  }
 
  #logo-image, .title, #game-rules {
@@ -67,7 +67,7 @@ body {
 
   .popup {
     display: none;
-}
+} 
    
   .popup.active {
     display:block;
@@ -88,7 +88,7 @@ body {
 
 .title {
     font-size: 40px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .button-div {

@@ -31,11 +31,11 @@ console.log(nextNum);
  * Add event listener for the 'How to Play' button. On click displays game description. 
  */
 
-document.getElementById("game-rules").addEventListener("click", togglePopup());
-
-function togglePopup(){
-   document.getElementById("popup-1").classList.toggle("active");
-}
+ function togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
+ }
+ 
+document.getElementById("game-rules").addEventListener("click", togglePopup);
 
 /**
  * Added event listeners to each button, play to start the game 
