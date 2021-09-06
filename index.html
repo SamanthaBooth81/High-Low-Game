@@ -14,10 +14,15 @@
 </head>
 
 <body>
+
+    <!-- Header contains the game logo, game title and toggle button with game instructions -->
     <header>
         <img src="assets/images/high-low-logo .png" alt="high low game logo" id="logo-image">
         <h1 class="title">High / Low... How Far Can You Go?</h1>
 
+        <!--Div to contain the game instructions.
+            I used the following video to help create popout window for the game instructions: 
+            https://www.youtube.com/watch?v=iE_6pQ3RlZU-->
         <div class="popup" id="popup-1">
             <div class="content">
                 <!--&nbsp was added before the word 'Simply' as the space between scentences was not showing on the webpage-->
@@ -29,9 +34,16 @@
                 <div class="close-btn" onclick="togglePopup()">×</div>
             </div>
         </div>
+        <!--When button clicked game instructions are revealed-->
         <button onclick="togglePopup" id="game-rules">How to Play</button>
     </header>
 
+    <!--Game Area containing:
+    1. Play button - initially starts the game. Click to reveal the first random number, 
+    user must guess if following number is higher or lower
+    2. Higher Button - User clicks if their choice is higher
+    3. Span containing the random Number user will guess from. The play button will generate the number here
+    4. Lower Button - User clicks if their choice is lower-->
     <div class="button-div">
         <button alt="play" data-type="play" id="play-button" class="game-btn"><img
                 src="assets/images/play-button.png"></button>
@@ -42,11 +54,14 @@
                 src="assets/images/resized-lower-icon.png" alt="lower button image" class="button-image"></button>
     </div>
 
+    <!--Score div, the score is incremented if the user guesses correctly and reset to 0 
+        if the user guesses incorrectly-->
     <div class="score">
         <p class="score">Score:</p>
         <p id="score-total" class="score">0</p>
     </div>
 
+    <!--Links to JavaScript Code-->
     <script src="assets/js/script.js"></script>
 </body>
 
