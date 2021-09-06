@@ -38,18 +38,21 @@
         <button onclick="togglePopup" id="game-rules">How to Play</button>
     </header>
 
-    <!--Game Area containing:
-    1. Play button - initially starts the game. Click to reveal the first random number, 
-    user must guess if following number is higher or lower
-    2. Higher Button - User clicks if their choice is higher
-    3. Span containing the random Number user will guess from. The play button will generate the number here
-    4. Lower Button - User clicks if their choice is lower-->
+    <!--Game Area containing: Play button, Higher Button, Random Number Span, Lower Button-->
     <div class="button-div">
+        <!--Play button - initially starts the game. Click to reveal the first random number, 
+    user must guess if following number is higher or lower. Image for play button created on Canva-->
         <button alt="play" data-type="play" id="play-button" class="game-btn"><img
                 src="assets/images/play-button.png"></button>
+        
+        <!--Higher Button - User clicks if their choice is higher-->
         <button data-type="higher" alt="higher" id="higher-button" class="game-btn"><img
                 src="assets/images/resized-higher-button.png" alt="higher button image" class="button-image"></button>
+        
+        <!--Span containing the random Number user will guess from. The play button will generate the number here-->
         <span id="random-number">0</span>
+
+        <!--Lower Button - User clicks if their choice is lower-->
         <button data-type="lower" alt="lower" id="lower-button" class="game-btn"><img
                 src="assets/images/resized-lower-icon.png" alt="lower button image" class="button-image"></button>
     </div>
