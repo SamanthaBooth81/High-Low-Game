@@ -5,6 +5,10 @@ let currentNum = 0;
 let randomNumber = generateRandomNumber(); 
 let randomNumberElem = document.getElementById("random-number");
 
+if (randomNumberElem === 0) {
+    alert("Press play to start!")
+}
+
 /** 
 *Sets the score to 0 
 **/
@@ -48,7 +52,12 @@ for (let button of buttons) {
     button.addEventListener("click", function () {
         
         if (this.getAttribute("data-type") === "play") {
-            document.getElementById("random-number").innerHTML = generateRandomNumber();
+            if (randomNumberElem.innerText > 0) {
+                document.location.reload();
+                clearInterval(interval);
+            } else {
+                document.getElementById("random-number").innerHTML = generateRandomNumber();
+            };
 
         } else if (this.getAttribute("data-type") === "higher") {
             runGame("higher");
