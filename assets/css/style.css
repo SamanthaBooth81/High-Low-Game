@@ -269,6 +269,10 @@ body {
 
     }
 
+    .title {
+        word-break: break-word; 
+    }
+
     #game-rules {
         float: none;
         display: block;
