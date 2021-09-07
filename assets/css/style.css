@@ -1,5 +1,7 @@
+/* Google fonts link */
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Oswald&family=Urbanist:wght@300&display=swap');
 
+/* Set basic CSS to entire document */
 body {
     text-align: center;
     font-family: 'Acme', sans-serif, 'Oswald', sans-serif, 'Urbanist', sans-serif;
@@ -8,15 +10,19 @@ body {
     margin: 30px;
  }
 
+ /* Header contains Logo, Title and Game Instructions button. Margins set so game area isn't too close */
  header{
      margin-bottom: 50px;
+     margin-top: 30px;
  }
 
+ /* Logo, Title and Game Instructions button set in one line */
  #logo-image, .title, #game-rules {
     display: inline;
     align-items: center;
 }
 
+/* CSS for Game Instructions Button in the top right */
  #game-rules {
     float: right;
     padding:15px;
@@ -30,6 +36,7 @@ body {
     cursor: pointer;
   } 
 
+/* Content for Game Instructions button */
  .popup .content {
     position:absolute;
     top:50%;
@@ -47,10 +54,12 @@ body {
     border-radius: 20px 5px;
   }
 
+  /*Set margin for first paragraph element within the content Div*/
   .popup .content .game-description {
     margin-top: 40px;
   }
-   
+  
+  /*Content Close button*/
   .popup .close-btn {
     cursor:pointer;
     position:absolute;
@@ -65,19 +74,23 @@ body {
     text-align:center;
   }
 
+  /*Game Instructions set to not display until clicked*/
   .popup {
     display: none;
 } 
-   
+ 
+ /*Game Instructions set to display when clicked*/
   .popup.active {
     display:block;
   } 
-   
+  
+  /*Game Instruction content set to transition in and out when button clicked*/
   .popup.active .content {
     transition:all 300ms ease-in-out;
     transform:translate(-50%,-50%) scale(1);
   }
 
+  /*CSS for logo in top left - Logo designed in Canva*/
 #logo-image {
     width: 90px;
     height: 90px;
@@ -86,11 +99,13 @@ body {
     margin-right: auto;
 }
 
+ /*Page title, font size set same as score and margin added to center it*/
 .title {
     font-size: 40px;
     margin-left: 30px;
 }
 
+ /*CSS for the Game Area Buttons (Play, High & Low)*/
 .button-div {
     width: 700px;
     height: 500px;
@@ -101,6 +116,7 @@ body {
     border-color: #7BFF2B;
 }
 
+/*CSS for higher and lower button images- images designed in Canva*/
 .button-image {
     margin: 0;
     padding: 0;
@@ -109,8 +125,8 @@ body {
     align-items: center;
 }
 
+/*CSS for higher button*/
 #higher-button{
-    /* margin-top: 45px; */
     margin-left: 30%;
     margin-right: 30%;
     background-color:#38b6ffab;
@@ -121,26 +137,12 @@ body {
     cursor: pointer;
 }
 
+/*CSS for higher button on hover colour*/
 #higher-button:hover {
     background-color: #7BFF2B;
 }
 
-#play-button {
-    background-color: black;
-    border: black;
-    border-style: none;
-}
-#play-button img{
-    height: 120px;
-    cursor: pointer;
-}
-
-#random-number {
-    font-size: 60px;
-    display: inline-block;
-    margin: 20px;
-}
-
+/*CSS for lower button*/
 #lower-button{
     margin-bottom: 45px;
     margin-left: 30%;
@@ -153,56 +155,40 @@ body {
     cursor: pointer;
 }
 
+/*CSS for lower button on hover colour*/
 #lower-button:hover {
     background-color: #7BFF2B;
 }
 
-h2 {
-    font-size: 45px;
-    margin: 10px;
+/*CSS for play button - button image downloaded from Canva*/
+#play-button {
+    background-color: black;
+    border: black;
+    border-style: none;
 }
 
+/*CSS for play button - button image downloaded from Canva*/
+#play-button img{
+    height: 120px;
+    cursor: pointer;
+}
+
+/*CSS for Random Number Span between higher and lower buttons*/
+#random-number {
+    font-size: 60px;
+    display: inline-block;
+    margin: 20px;
+}
+
+/*CSS for Score Div below Game Area*/
 .score {
     font-size: 40px;
-    margin: 0;
+    margin-top: 20px;
     padding: 5px;
     display:inline-block;
 }
 
+/*CSS for Score total below Game Area, set to contrast Score title*/
 #score-total {
     color: #7BFF2B;
-}
-
-#box {
-    background-color: rgb(209, 135, 238);
-    width: 450px;
-    height: 180px;
-    border-radius: 10px;
-    position: absolute;
-    top: 38%;
-    left: 35%;
-    display: none;
-}
-
-#box h1 {
-    margin: 5px;
-    padding: 10px;
-
-}
-#box p {
-    margin: 5px;
-    padding: 10px;
-    display: block;
-}
-
-.play-game {
-    margin: 5px;
-    background-color: #38B6FF;
-    border: 1px solid #FC52FF;
-    padding: 10px 20px;
-    display: inline-block;
-    width: 150px;
-    cursor: pointer;
-}
-
-
+} 
