@@ -281,7 +281,8 @@ body {
     }
 
     .button-div {
-        margin: 50px;
+        margin: 30px;
+        width: 600px;
     }
 
     #higher-button,
