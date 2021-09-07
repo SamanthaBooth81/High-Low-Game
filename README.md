@@ -103,6 +103,20 @@ The user clicks the buttons to make their choice, if they are correct an alert w
 
 # Testing
 # Validator Testing
+
+HTML
+
+Error indicated for the use of &nbsp to create a space within the How to Play button content for the popout window. However, this is required as without there is no space between sentences. 
+
+No other errors were returned when passing through the official W3C validator.
+
+CSS
+
+No errors were found when passing through the official (Jigsaw) validator.
+Warnings were flagged for background colour of the Play Button as it matched the background colour of the document but it is required as without the background of the image is white. 
+
+Also put through WAVE to test colour contrast through out.
+
 # Bugs Found 
 No bugs found. 
 During development the following issues occured but were fixed prior to deployment:
