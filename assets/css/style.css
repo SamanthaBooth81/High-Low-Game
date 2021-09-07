@@ -21,6 +21,7 @@ body {
 /* CSS for Game Instructions Button in the top right */
 #game-rules {
     float: right;
+    width: 150px;
     padding: 15px;
     background: #FC52FF;
     border: 2px solid;
@@ -98,6 +99,7 @@ body {
 /*Page title, font size set same as score and margin added to center it*/
 .title {
     font-size: 40px;
+    margin-left: 30px;
 }
 
 /*CSS for the Game Area Buttons (Play, High & Low)*/
@@ -189,7 +191,7 @@ body {
 }
 
 /*Breakpoints/Maedia Queries for responsivness for displays with a maximum width of 850px*/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     body {
         margin: 0;
         width: fit-content;
@@ -214,12 +216,32 @@ body {
         margin: auto;
     }
 
+    .title {
+        margin: 20px;
+    }
+
     #popup-1 {
         position: relative;
     }
 
     .button-div {
         margin: 50px;
+    }
+
+    #higher-button,
+    #lower-button {
+        width: 400px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #play-button,
+    #higher-button,
+    #random-number,
+    #lower-button {
+        display: block;
+        margin: auto;
+        padding: 10px;
     }
 
     .score {
@@ -260,17 +282,6 @@ body {
     #higher-button,
     #lower-button {
         width: 500px;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    #play-button,
-    #higher-button,
-    #random-number,
-    #lower-button {
-        display: block;
-        margin: auto;
-        padding: 10px;
     }
 
     #game-rules {
