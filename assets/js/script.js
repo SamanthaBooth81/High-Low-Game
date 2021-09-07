@@ -1,8 +1,8 @@
 /** 
-*Variables called below set the replace the current number with a new random number 
-**/
+ *Variables called below set the replace the current number with a new random number 
+ **/
 let currentNum = 0;
-let randomNumber = generateRandomNumber(); 
+let randomNumber = generateRandomNumber();
 let randomNumberElem = document.getElementById("random-number");
 
 if (randomNumberElem === 0) {
@@ -10,15 +10,15 @@ if (randomNumberElem === 0) {
 }
 
 /** 
-*Sets the score to 0 
-**/
+ *Sets the score to 0 
+ **/
 const scoreElm = document.getElementById("score-total");
 let score = 0;
 
 /** 
  * Generates a number at random, randomNumber function is used when play button 
  * is clicked and when the users choice is correct
-*/
+ */
 function generateRandomNumber() {
     return Math.floor(Math.random() * 99) + 1;
 
@@ -27,7 +27,7 @@ function generateRandomNumber() {
 
 /** 
  * Generates a new number for the computer to use as comparison against the previous random number generated
-*/
+ */
 let nextNum = generateRandomNumber();
 console.log(nextNum);
 
@@ -35,10 +35,10 @@ console.log(nextNum);
  * Add event listener for the 'How to Play' button. On click displays game description. 
  */
 
- function togglePopup(){
+function togglePopup() {
     document.getElementById("popup-1").classList.toggle("active");
- }
- 
+}
+
 document.getElementById("game-rules").addEventListener("click", togglePopup);
 
 /**
@@ -50,7 +50,7 @@ document.getElementById("game-rules").addEventListener("click", togglePopup);
 let buttons = document.getElementsByClassName("game-btn");
 for (let button of buttons) {
     button.addEventListener("click", function () {
-        
+
         if (this.getAttribute("data-type") === "play") {
             if (randomNumberElem.innerText > 0) {
                 document.location.reload();
@@ -67,7 +67,7 @@ for (let button of buttons) {
             runGame("lower");
         }
     })
- }
+}
 
 /**
  * This function calculates the correct answer and checks against the user input. 
@@ -81,31 +81,30 @@ function runGame(userChoice) {
     console.log(nextNum);
 
     let isAnswerCorrect = false;
-    if (randomNumber < currentNum && userChoice === "higher"){
+    if (randomNumber < currentNum && userChoice === "higher") {
         //  correctAnswer == document.getElementById("higher");
-         isAnswerCorrect = true; 
-         incrementScore();
-         
-
-    } else if (randomNumber > currentNum && userChoice === "lower"){
-        // correctAnswer == document.getElementById("lower");
-        isAnswerCorrect = true; 
+        isAnswerCorrect = true;
         incrementScore();
-    } 
 
-    if (isAnswerCorrect){
+
+    } else if (randomNumber > currentNum && userChoice === "lower") {
+        // correctAnswer == document.getElementById("lower");
+        isAnswerCorrect = true;
+        incrementScore();
+    }
+
+    if (isAnswerCorrect) {
         currentNum = randomNumber;
         randomNumber = generateRandomNumber();
         randomNumberElem.innerText = randomNumber;
         alert("Correct Answer!");
-    }
-    else {
+    } else {
         score = 0;
         score.innerText = score;
         alert("Incorrect Answer! GAME OVER");
         document.location.reload();
         clearInterval(interval);
-    } 
+    }
 }
 
 /**
