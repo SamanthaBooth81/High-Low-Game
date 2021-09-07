@@ -1,6 +1,6 @@
 <h1 align="center">High / Low - How far can you go?</h1>
 
-ADD RESPONSIVE IMAGE HERE!!!!!!
+![Responsiveness Screenshot](/assets/images/responsive-screenshot.png)
 
 ADD LINK TO REPOSITORY HERE!!!!
 
@@ -102,6 +102,25 @@ The user clicks the buttons to make their choice, if they are correct an alert w
 - [JSFiddle](https://jsfiddle.net/) to double check code and functionality before added to Gitpod. 
 
 # Testing
+
+To test the site the usability and the functionality of the game I shared the deployed site with a few friends and family members of different ages to confirm ease of use. As far as they could see there weren’t any issues with understanding how to play the game, the functionality of the game and the layout on their screens. 
+
+## Compatibility Testing
+Devices Tested with:
+- Apple MacBook Pro 13”
+- Razer Blaze Pro 17.3”
+- iPad OS 14.6
+- Apple iPhone X
+- Apple iPhone XR Plus
+- Samsung S10+
+- Samsung Galaxy Z Flip3 
+
+Web Browsers tested on:
+- Google Chrome
+- Safari
+- Microsoft Edge
+Chrome DevTools was also extensively used to test responsiveness. 
+
 # Validator Testing
 
 HTML
@@ -130,9 +149,10 @@ During development the following issues occured but were fixed prior to deployme
 
 - The images were designed and downloaded using [Canva Pro](https://www.canva.com/). 
 - Code for generating the Random Number was sources from [WordPress Development](https://wordpress.stackexchange.com/questions/354184/insert-a-button-on-a-page-with-random-number-generation).
+- I used this [YouTube Video](https://www.youtube.com/watch?v=iE_6pQ3RlZU) video to help create a popout window for the game instructions. 
 
-## Media 
 # Acknowledgments
+Thank you to all who helped keep me sane as I created my first game, espcially to my mentor for his guidance and patience. 
 
 
 
