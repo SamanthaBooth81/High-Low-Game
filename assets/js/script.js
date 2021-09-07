@@ -105,6 +105,7 @@ function runGame(userChoice) {
         document.location.reload();
         clearInterval(interval);
     }
+ 
 }
 
 /**
@@ -114,3 +115,4 @@ function incrementScore() {
     score = score + 1 //score to equal itself plus one
     scoreElm.innerHTML = score; //update the score on innerHTML
 };
+

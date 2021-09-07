@@ -17,7 +17,7 @@
 
     <!-- Header contains the game logo, game title and toggle button with game instructions -->
     <!-- <header> -->
-    <img src="assets/images/high-low-logo .png" alt="high low game logo" id="logo-image">
+    <img src="assets/images/high-low-logo.png" alt="high low game logo" id="logo-image">
     <h1 class="title">High / Low... How Far Can You Go?</h1>
 
     <!--Div to contain the game instructions.
@@ -28,7 +28,7 @@
             <!--&nbsp was added before the word 'Simply' as the space between scentences was not showing on the webpage-->
             <p class="game-description"> The aim of the game is to guess if the hidden number will be higher or
                 lower than the number displayed.
-                &nbspSimply choose between the higher or lower buttons and hope for the best! &nbspAre you feeling
+                &nbsp Simply choose between the higher or lower buttons and hope for the best! &nbsp Are you feeling
                 lucky?</p>
             <p>Press play to start!</p>
             <div class="close-btn" onclick="togglePopup()">×</div>
@@ -42,18 +42,18 @@
     <div class="button-div">
         <!--Play button - initially starts the game. Click to reveal the first random number, 
     user must guess if following number is higher or lower. Image for play button created on Canva-->
-        <button alt="play" data-type="play" id="play-button" class="game-btn"><img
-                src="assets/images/play-button.png"></button>
+        <button data-type="play" id="play-button" class="game-btn"><img
+                src="assets/images/play-button.png" alt="Play Button Image, click to start the game"></button>
 
         <!--Higher Button - User clicks if their choice is higher-->
-        <button data-type="higher" alt="higher" id="higher-button" class="game-btn"><img
+        <button data-type="higher" id="higher-button" class="game-btn"><img
                 src="assets/images/resized-higher-button.png" alt="higher button image" class="button-image"></button>
 
         <!--Span containing the random Number user will guess from. The play button will generate the number here-->
         <span id="random-number">0</span>
 
         <!--Lower Button - User clicks if their choice is lower-->
-        <button data-type="lower" alt="lower" id="lower-button" class="game-btn"><img
+        <button data-type="lower" id="lower-button" class="game-btn"><img
                 src="assets/images/resized-lower-icon.png" alt="lower button image" class="button-image"></button>
     </div>
 

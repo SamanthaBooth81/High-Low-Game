@@ -214,6 +214,10 @@ body {
         margin: auto;
     }
 
+    #popup-1 {
+        position:relative;
+    }
+
     .button-div {
         margin: 50px;
     }
