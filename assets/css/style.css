@@ -45,12 +45,12 @@ body {
     background:rgb(24, 23, 23);
     color: #FC52FF;
     font-size: larger;
+    line-height: 35px;
     width:95%;
     max-width:500px;
     height:250px;
     text-align:center;
     padding:28px;
-    box-sizing:border-box;
     border-radius: 20px 5px;
   }
 
