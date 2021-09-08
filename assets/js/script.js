@@ -5,10 +5,6 @@ let currentNum = 0;
 let randomNumber = generateRandomNumber();
 let randomNumberElem = document.getElementById("random-number");
 
-if (randomNumberElem === 0) {
-    alert("Press play to start!")
-}
-
 /** 
  *Sets the score to 0 
  **/
@@ -50,10 +46,10 @@ document.getElementById("game-rules").addEventListener("click", togglePopup);
 let buttons = document.getElementsByClassName("game-btn");
 for (let button of buttons) {
     button.addEventListener("click", function () {
-
+    
         if (this.getAttribute("data-type") === "play") {
             if (randomNumberElem.innerText > 0) {
-                document.location.reload();
+                document.location.reload(); // added to restart the game if the user presses the play button mid-game(to prevent cheating)
                 clearInterval(interval);
             } else {
                 document.getElementById("random-number").innerHTML = generateRandomNumber();
@@ -80,6 +76,10 @@ function runGame(userChoice) {
     randomNumber.innerText = nextNum;
     console.log(nextNum);
 
+    if (randomNumber === 0) {
+        alert("Press play to start!")
+    }
+
     let isAnswerCorrect = false;
     if (randomNumber < currentNum && userChoice === "higher") {
         //  correctAnswer == document.getElementById("higher");
@@ -105,7 +105,6 @@ function runGame(userChoice) {
         document.location.reload();
         clearInterval(interval);
     }
- 
 }
 
 /**
