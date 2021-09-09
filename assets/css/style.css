@@ -271,7 +271,7 @@ body {
 
     .title {
         word-break: break-word; 
-        font-size: 35px;
+        font-size: 30px;
     }
 
     #game-rules {
@@ -282,12 +282,12 @@ body {
 
     .button-div {
         margin: 30px;
-        width: 600px;
+        width: 500px;
     }
 
     #higher-button,
     #lower-button {
-        width: 500px;
+        width: 450px;
     }
 
     #game-rules {
