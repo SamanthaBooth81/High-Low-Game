@@ -1,6 +1,6 @@
 <h1 align="center">High / Low - How far can you go?</h1>
 
-![Responsiveness Screenshot](/assets/images/responsive-screenshot.png)
+![Responsiveness Screenshot](/assets/images/responsive-image.png)
 
 ADD LINK TO REPOSITORY HERE!!!!
 
@@ -25,6 +25,8 @@ The use of JavaScript enables the random selection of a number an also allows th
 
 [Validator Testing](#validator-testing)
 
+[Performancce Testing](#performance-testing)
+
 [Bugs Found](#bugs-found)
 
 [Deployment](#deployment)
@@ -35,6 +37,15 @@ The use of JavaScript enables the random selection of a number an also allows th
 
 # User Experience
 ## User Stories
+- As a visitor who needs something to break up their day
+    * I want to easily understand the rules and layout of the game without additional instructions needed, however still provided. 
+    * I want to intuitively understand how the game works. 
+- As a visitor who enjoys chance games 
+    - I want to play a simple game that is also challenging in its range of choice 
+    * I want to intuitively understand how the game works. 
+- As a visitor who wishes to be entertained 
+    * I want a game that is catchy and addictive without being too difficult 
+    * I want a game that I do not have to keep up with a story line 
 
 ## Design
 
@@ -63,11 +74,17 @@ I also used the fallback fonts of:
 
 ### Wireframes
 
-- The following wireframes were created in Balsamiq, the were followed closely to acheieve the final outcome. 
+- The following wireframes were created in Balsamiq, the were followed closely to acheieve the final outcome. However, there was a change in the header and Game Instructions moved into a popup window. 
 
-<img src="assets/images/load-page-wireframe-min.png" height="300px"> 
+<img src="assets/images/load-page-wireframe-min.png" height="305px"> 
 
 <img src="assets/images/incorrect-answer-wireframe-min.png" height="300px"> 
+
+- The below is a screenshot of the final page layout 
+
+<img src="assets/images/game-overview.png" height="250px"> 
+
+
 
 ### Other Details
 - I intentionally designed the button images to flow like an arrow head, up for higher and down for lower. I also, added some pink contrast to the text to tie in with the colour scheme. 
@@ -77,33 +94,72 @@ I also used the fallback fonts of:
 
 - The same theme was applied to the design of the logo, with the shape pointing in both up and down directions. 
 
-<img src="assets/images/high-low-logo .png" height="100px">
-
+<img src="assets/images/high-low-logo.png" height="100px">
 
 # Features
 
-- Game Heading & Logo 
+- Game Logo, Heading, and How to Play Button 
 
-- Game Aim 
+<img src="assets/images/page-header.png">
 
-- Game Area 
+- Game Instructions: 
+Click on the How to Play button and the Game Instructions appear via a popup window.
+
+<img src="assets/images/instructions-button.png" height="80px">
+<br>
+<img src="assets/images/game-instructions.png" height="280px">
+
+- Game Area:
 The user clicks the buttons to make their choice, if they are correct an alert will appear to confirm this and the score will increment by 1 point. If they are incorrect, an alert will apear to tell them this and they game will start from the beginning. 
 
+<img src="assets/images/game-area.png" height="300px">
+
 - Score 
+Increments by 1 with each correct answer and automatically resets to 0 when user answer is incorrect.
+
+<img src="assets/images/score.png" height ="80px">
 
 ## Features to be Implemented
 
-- Additional games could be added such as rock, paper, scissors or a matching game using colours or numbers (similar to the card game pairs). 
+- Levels could be implemented by increasing the number range as the scores reach certain stages.
 
-- Scoreboard containing the top 10 highest scores with the date acheived 
+- Scoreboard containing the top 3 highest scores with the date acheived.
+
+- Lives could be added to give the user 3 chances. Lives could also increase if they reach certain checkpoints.
+
+- Additional games could be added such as rock, paper, scissors or a matching game using colours or numbers (similar to the card game pairs). 
 
 # Technologies Used
 
-- [JSFiddle](https://jsfiddle.net/) to double check code and functionality before added to Gitpod. 
+### Languages Used
+
+[HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+[CSS](https://en.wikipedia.org/wiki/CSS)
+
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries and Programmes Used 
+
+[JSFiddle](https://jsfiddle.net/) to double check code and functionality before added to Gitpod. 
+
+[GitHub](https://github.com/) - Used to hold a repository of my project and deploy the live website to Git Pages, making it public.
+
+[GitPod](https://gitpod.io/workspaces) – Connected to GitHub, GitPod hosted the coding space, allowing the project to be built and then committed to the GitHub repository. 
+
+[Google Fonts](https://fonts.google.com/) - Used to import 'Gotu' and 'Open Sans' fonts into the style sheet. 
+
+[Favicon Generator](https://favicon.io/favicon-converter/) - Used to convert a .png file into a Favicon.
+
+[Canva](https://www.canva.com/) - Used to decide inital colours for the project.
+
 
 # Testing
 
-To test the site the usability and the functionality of the game I shared the deployed site with a few friends and family members of different ages to confirm ease of use. As far as they could see there weren’t any issues with understanding how to play the game, the functionality of the game and the layout on their screens. 
+## Functionality 
+The game was tested using console.logs to ensure the code was calculating the correct answer and incrementing/decreasing the score as it should. 
+
+To test the site the usability and the functionality of the game I also shared the deployed site with a few friends and family members of different ages to confirm ease of use. As far as they could see there weren’t any issues with understanding how to play the game, the functionality of the game and the layout on their screens. 
 
 ## Compatibility Testing
 Devices Tested with:
@@ -123,36 +179,73 @@ Chrome DevTools was also extensively used to test responsiveness.
 
 # Validator Testing
 
-HTML
+- HTML
 
-Error indicated for the use of &nbsp to create a space within the How to Play button content for the popout window. However, this is required as without there is no space between sentences. 
+No errors were returned when passing through the official W3C validator.
 
-No other errors were returned when passing through the official W3C validator.
-
-CSS
+- CSS
 
 No errors were found when passing through the official (Jigsaw) validator.
-Warnings were flagged for background colour of the Play Button as it matched the background colour of the document but it is required as without the background of the image is white. 
+Warnings were flagged for background colour of the Play Button as it matched the background colour of the document but it is required as without a set background colour for the image the background displays white for the button. 
 
-Also put through WAVE to test colour contrast through out.
+- JavaScript
+
+No errors were found when passing through [JS Hint](https://jshint.com/). 
+
+Also put through [WAVE](https://wave.webaim.org/) to test colour contrast through out.
+
+# Performance Testing
+The performance testing of the site was completed using WebPageTest with the location set as London and browser Google Chrome.
+
+The following results was received:
+
+<img src="assets/images/performance-testing.png" height="100px">
+
+Areas of improvement are Security and Cache Static Content which are not part of this projects scope but I will work on these for future projects.
 
 # Bugs Found 
 No bugs found. 
+
 During development the following issues occured but were fixed prior to deployment:
 - A new random number wasn't automatically replacing on the screen the previous number
 - The correct answer wasn't being calculated and then compared with the users answer
 - A new random number wasn't being generated after each user guess
 - The play button generated a new number every time it was pressed but didn't start the game over as it should so the user could skip a number if they felt it would be difficult to guess correctly
 # Deployment 
+
+This project has been publish on [GitHub Pages](https://github.com/SamanthaBooth81/High-Low-Game). 
+
+To deploy my site to GitHub Pages I completed the following steps:    
+
+- Ensured all code had been committed and pushed into my GitHub Repository. 
+
+- clicked on **Settings**, found at the end of the navigation bar within the Repository.
+
+<img src="assets/images/github-settings.png" height="50px">
+
+- Once in Settings, scrolled down and clicked on **Pages** located near the bottom of the left navigation bar.
+
+<img src="assets/images/github-pages-screenshot.png" height="100px">
+
+- Saved the **Source** as **Root** to ensure the webpage will be built from the main branch.
+
+<img src="assets/images/page-source.png" height="100px">
+
+- Once the source had been saved, GitHub Pages generated a link to my live site. 
+
+<img src="assets/images/github-website-link.png" height="100px">
+
 # Credit
 ## Content 
 
 - The images were designed and downloaded using [Canva Pro](https://www.canva.com/). 
+
 - Code for generating the Random Number was sources from [WordPress Development](https://wordpress.stackexchange.com/questions/354184/insert-a-button-on-a-page-with-random-number-generation).
+
 - I used this [YouTube Video](https://www.youtube.com/watch?v=iE_6pQ3RlZU) video to help create a popout window for the game instructions. 
 
 # Acknowledgments
-Thank you to all who helped keep me sane as I created my first game, espcially to my mentor for his guidance and patience. 
+Thank you to all who encouraged and supported me as I created my first game, espcially to my mentor for his guidance and patience. 
 
 
 

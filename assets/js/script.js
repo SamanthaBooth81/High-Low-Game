@@ -50,7 +50,7 @@ for (let button of buttons) {
                 clearInterval(interval); // added to restart the game if the user presses the play button mid-game(to prevent cheating)
             } else {
                 document.getElementById("random-number").innerHTML = generateRandomNumber();
-            };
+            }
 
         } else if (this.getAttribute("data-type") === "higher") {
             
@@ -69,7 +69,7 @@ for (let button of buttons) {
                 runGame("lower");
             }
         }
-    })
+    });
 }
 
 /**
@@ -83,7 +83,7 @@ function runGame(userChoice) {
     randomNumber.innerText = nextNum;
 
     if (randomNumberElem === 0) {
-        alert("Press play to start!")
+        alert("Press play to start!");
     }
 
     let isAnswerCorrect = false;
@@ -117,7 +117,7 @@ function runGame(userChoice) {
  * function increments the score if the answer is correct
  */
 function incrementScore() {
-    score = score + 1 //score to equal itself plus one
+    score = score + 1; //score to equal itself plus one
     scoreElm.innerHTML = score; //update the score on innerHTML
-};
+}
 
