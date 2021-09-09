@@ -50,17 +50,27 @@ for (let button of buttons) {
         if (this.getAttribute("data-type") === "play") {
             if (randomNumberElem.innerText > 0) {
                 document.location.reload(); // added to restart the game if the user presses the play button mid-game(to prevent cheating)
-                clearInterval(interval);
+                clearInterval(interval); // added to restart the game if the user presses the play button mid-game(to prevent cheating)
             } else {
                 document.getElementById("random-number").innerHTML = generateRandomNumber();
             };
 
         } else if (this.getAttribute("data-type") === "higher") {
-            runGame("higher");
+            
+            if (randomNumberElem.innerText === "0") {
+                alert("Press play to start!"); // Alerts the user to press Play to begin the game
+            } else {
+                runGame("higher");
+            }
 
         } else {
             this.getAttribute("data-type") === "lower";
-            runGame("lower");
+            
+            if (randomNumberElem.innerText === "0") {
+                alert("Press Play to start!"); // Alerts the user to press Play to begin the game
+            } else {
+                runGame("lower");
+            }
         }
     })
 }
@@ -76,7 +86,7 @@ function runGame(userChoice) {
     randomNumber.innerText = nextNum;
     console.log(nextNum);
 
-    if (randomNumber === 0) {
+    if (randomNumberElem === 0) {
         alert("Press play to start!")
     }
 
