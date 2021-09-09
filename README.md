@@ -2,9 +2,11 @@
 
 ![Responsiveness Screenshot](/assets/images/responsive-image.png)
 
-ADD LINK TO REPOSITORY HERE!!!!
+**Live Site**
+[High/Low Game Website](https://samanthabooth81.github.io/High-Low-Game/)
 
-ADD LINK TO WEB PAGE HERE!!!!
+**Repository**
+[High/Low Game Repository](https://github.com/SamanthaBooth81/High-Low-Game)
 
 # About
 High / Low is a game of chance involving, as the title suggests, picking between a higher or lower number than the one randomly generated. This game is targeted for those who enjoy a simple arcade style games that are based on decision making using probability as a foundation. 
