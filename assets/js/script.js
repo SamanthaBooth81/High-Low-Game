@@ -17,15 +17,12 @@ let score = 0;
  */
 function generateRandomNumber() {
     return Math.floor(Math.random() * 99) + 1;
-
-    console.log(randomNumber1);
 }
 
 /** 
  * Generates a new number for the computer to use as comparison against the previous random number generated
  */
 let nextNum = generateRandomNumber();
-console.log(nextNum);
 
 /**
  * Add event listener for the 'How to Play' button. On click displays game description. 
@@ -84,7 +81,6 @@ function runGame(userChoice) {
     currentNum = nextNum;
     nextNum = generateRandomNumber();
     randomNumber.innerText = nextNum;
-    console.log(nextNum);
 
     if (randomNumberElem === 0) {
         alert("Press play to start!")
