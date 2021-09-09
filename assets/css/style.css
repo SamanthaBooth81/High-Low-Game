@@ -104,13 +104,14 @@ body {
 
 /*CSS for the Game Area Buttons (Play, High & Low)*/
 .button-div {
-    width: 700px;
+    width: 870px;
     height: 500px;
     margin: auto;
     margin-top: 60px;
     border-radius: 10px;
     border-style: dotted;
     border-color: #7BFF2B;
+    background-color: black;
 }
 
 /*CSS for higher and lower button images- images designed in Canva*/
@@ -124,12 +125,12 @@ body {
 
 /*CSS for higher button*/
 #higher-button {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin: auto;
+    display: block;
     background-color: #38b6ffab;
     border: 3px solid #FC52FF;
     border-radius: 30px;
-    width: 300px;
+    width: 450px;
     height: 100px;
     cursor: pointer;
 }
@@ -141,13 +142,13 @@ body {
 
 /*CSS for lower button*/
 #lower-button {
+    margin: auto;
+    display: block;
     margin-bottom: 45px;
-    margin-left: 30%;
-    margin-right: 30%;
     background-color: #38b6ffab;
     border: 3px solid #FC52FF;
     border-radius: 30px;
-    width: 300px;
+    width: 450px;
     height: 100px;
     cursor: pointer;
 }
@@ -168,6 +169,7 @@ body {
 #play-button img {
     height: 120px;
     cursor: pointer;
+    display: inline-block;
 }
 
 /*CSS for Random Number Span between higher and lower buttons*/
@@ -191,7 +193,7 @@ body {
 }
 
 /*Breakpoints/Maedia Queries for responsivness for displays with a maximum width of 850px*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
     body {
         margin: 0;
         width: fit-content;
