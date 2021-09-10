@@ -25,7 +25,11 @@
     <h1 class="title">High / Low... How Far Can You Go?</h1>
 
     <!--Div to contain the game instructions.
-            I used the following video to help create popout window for the game instructions: 
+        When button clicked game instructions are revealed-->
+    <a onclick="togglePopup" id="game-rules">How to Play</a>
+            
+    
+    <!-- I used the following video to help create popout window for the game instructions: 
             https://www.youtube.com/watch?v=iE_6pQ3RlZU-->
     <div class="popup" id="popup-1">
         <div class="content">
@@ -38,8 +42,7 @@
             <div class="close-btn" onclick="togglePopup()">×</div>
         </div>
     </div>
-    <!--When button clicked game instructions are revealed-->
-    <button onclick="togglePopup" id="game-rules">How to Play</button>
+
     <!-- </header> -->
 
     <!--Game Area containing: Play button, Higher Button, Random Number Span, Lower Button-->
